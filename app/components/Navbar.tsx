@@ -28,11 +28,12 @@ export default function Navbar() {
           </a>
 
           {/* Dropdown */}
-          <div className="relative group">
-            <button className="flex items-center hover:text-green-400 transition-colors">
+          <div className="relative">
+            <button className="peer flex items-center hover:text-green-400 transition-colors">
               Programs <span className="ml-1">▾</span>
             </button>
-            <div className="absolute hidden group-hover:block bg-black/90 rounded-xl mt-2 shadow-lg backdrop-blur-md border border-gray-700">
+            {/* Dropdown menu */}
+            <div className="absolute top-full left-0 hidden peer-hover:flex hover:flex flex-col bg-black/90 rounded-xl mt-1 shadow-lg backdrop-blur-md border border-gray-700">
               <a
                 href="#future"
                 className="block px-4 py-2 hover:bg-green-600/20 rounded-t-xl"
