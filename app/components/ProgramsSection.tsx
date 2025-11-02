@@ -4,26 +4,31 @@ import Link from "next/link";
 const programs = [
   {
     title: "Future Champions",
+    slug: "future-champions",
     tags: ["Run Faster", "Boost Endurance"],
     image: "/program1.jpg",
   },
   {
     title: "Fundamental Program",
+    slug: "fundamental",
     tags: ["Run Faster", "Boost Endurance"],
     image: "/program2.jpg",
   },
   {
     title: "Women’s Program",
+    slug: "womens",
     tags: ["Run Faster", "Boost Endurance"],
     image: "/program3.jpg",
   },
   {
     title: "No GI Program",
+    slug: "nogi",
     tags: ["Run Faster", "Boost Endurance"],
     image: "/program4.jpg",
   },
   {
     title: "Advanced Program",
+    slug: "advanced",
     tags: ["Run Faster", "Boost Endurance"],
     image: "/program5.jpg",
   },
@@ -52,66 +57,64 @@ export default function ProgramsSection() {
 
       {/* Program Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-  {programs.map((program) => (
-    <div
-      key={program.title}
-      className="relative rounded-xl overflow-hidden shadow-lg group"
-    >
-      <Image
-        src={program.image}
-        alt={program.title}
-        width={400}
-        height={300}
-        className={`w-full h-84 object-cover group-hover:scale-105 transition-transform duration-300 ${
-          program.title === "Future Champions" ? "object-top" : "object-center"
-        }`}
-      />
+        {programs.map((program) => (
+          <div
+            key={program.title}
+            className="relative rounded-xl overflow-hidden shadow-lg group"
+          >
+            <Image
+              src={program.image}
+              alt={program.title}
+              width={400}
+              height={300}
+              className={`w-full h-84 object-cover group-hover:scale-105 transition-transform duration-300 ${
+                program.title === "Future Champions" ? "object-top" : "object-center"
+              }`}
+            />
 
-      {/* Overlay Content */}
-      <div className="absolute inset-0 bg-black/50 flex flex-col justify-end p-5">
-        {/* Wrap title + tags in one bottom block */}
-        <div>
-          {/* Title */}
-          <h3 className="text-white text-4xl font-bold mb-4">
-            {program.title}
-          </h3>
+            {/* Overlay Content */}
+            <div className="absolute inset-0 bg-black/50 flex flex-col justify-end p-5">
+              <div>
+                <h3 className="text-white text-4xl font-bold mb-4">{program.title}</h3>
 
-          {/* Tags + Arrow Row */}
-          <div className="flex items-center justify-between">
-            <div className="flex gap-2">
-              {program.tags.map((tag) => (
-                <span
-                  key={tag}
-                  className="bg-white/20 text-white text-sm px-3 py-1 rounded-full"
-                >
-                  {tag}
-                </span>
-              ))}
+                <div className="flex items-center justify-between">
+                  <div className="flex gap-2">
+                    {program.tags.map((tag) => (
+                      <span
+                        key={tag}
+                        className="bg-white/20 text-white text-sm px-3 py-1 rounded-full"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+
+                  {/* 👉 Arrow now wrapped in a Link */}
+                  <Link
+                    href={`/programs/${program.slug}`}
+                    className="bg-white text-black w-9 h-9 flex items-center justify-center rounded-full hover:bg-green-600 hover:text-white transition ml-3 flex-shrink-0"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      strokeWidth={2}
+                      stroke="currentColor"
+                      className="w-5 h-5"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M5 12h14m-7-7l7 7-7 7"
+                      />
+                    </svg>
+                  </Link>
+                </div>
+              </div>
             </div>
-
-            <button className="bg-white text-black w-9 h-9 flex items-center justify-center rounded-full hover:bg-green-600 hover:text-white transition ml-3 flex-shrink-0">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth={2}
-                stroke="currentColor"
-                className="w-5 h-5"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M5 12h14m-7-7l7 7-7 7"
-                />
-              </svg>
-            </button>
           </div>
-        </div>
+        ))}
       </div>
-    </div>
-  ))}
-</div>
-
     </section>
   );
 }

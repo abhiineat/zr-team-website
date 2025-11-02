@@ -4,7 +4,7 @@ import logo from "../../public/logo.png"; // make sure this exists in /public
 
 export default function Navbar() {
   return (
-    <nav className="fixed top-4 left-1/2 transform -translate-x-1/2 w-[90%] md:w-[90%] z-50 bg-gradient-to-r from-black/40 backdrop-blur-xs via-black/70 to-black/80  text-white py-2 px-2 rounded-full shadow-lg border border-white/10">
+    <nav className="fixed top-4 left-1/2 transform -translate-x-1/2 w-[90%] md:w-[90%] z-50 bg-black/40 backdrop-blur-sm text-white py-2 px-4 rounded-full shadow-lg border border-white/10">
       <div className="flex justify-between items-center">
         {/* Logo */}
         <div className="flex items-center">
