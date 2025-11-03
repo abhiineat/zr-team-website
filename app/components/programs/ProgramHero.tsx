@@ -17,7 +17,7 @@ export default function ProgramHero({
     <section className="max-w-6xl mx-auto mb-20 text-center">
       {/* Age Tag */}
       {ageGroup && (
-        <div className="inline-block bg-green-100 text-green-800 text-sm font-medium px-4 py-1 rounded-full mb-4">
+        <div className="inline-block bg-[#CFE7CB] text-black text-sm font-medium px-4 py-1 rounded-full mb-4">
           {ageGroup}
         </div>
       )}
@@ -35,7 +35,7 @@ export default function ProgramHero({
       )}
 
       {/* Main Image */}
-      <div className="relative max-w mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="relative max-w mx-auto px-4 sm:px-6 ">
   <div className="overflow-hidden  shadow-md">
     <Image
       src={image}

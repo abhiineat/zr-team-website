@@ -3,7 +3,7 @@ import { FaInstagram,  FaTwitter, FaYoutube } from "react-icons/fa";
 import { SlSocialFacebook,SlSocialYoutube,SlSocialTwitter} from "react-icons/sl";
 export default function Footer() {
   return (
-    <footer className="bg-white text-gray-900 pt-12 pb-6 border-t border-gray-200">
+    <footer className="bg-[#FBF8F8] text-gray-900 pt-12 pb-6 ">
       <div className="max-w-7xl mx-auto px-6">
         {/* Centered Logo + Question Line */}
         <div className="flex flex-col md:flex-row items-center justify-between gap-4 md:gap-6 mb-10">
@@ -79,7 +79,7 @@ export default function Footer() {
         </div>
 
         {/* Bottom Divider */}
-        <div className="mt-12 border-t border-gray-200 pt-4 text-center text-sm text-gray-600">
+        <div className="mt-12 border-t border-[#CFE7CB] pt-4 text-center text-sm text-gray-600">
           © ZR Team. All rights reserved. Designed by Konnect Vision Media
         </div>
       </div>

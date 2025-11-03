@@ -36,7 +36,7 @@ const programs = [
 
 export default function ProgramsSection() {
   return (
-    <section id="programs" className="bg-[#fafafa] text-black py-20 px-6 md:px-16">
+    <section id="programs" className="bg-[#FBF8F8] text-black py-20 px-6 md:px-16">
       {/* Header */}
       <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-12">
         <div>
