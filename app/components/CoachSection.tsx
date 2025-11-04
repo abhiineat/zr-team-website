@@ -24,16 +24,16 @@ export default function CoachSection() {
 
         {/* Badges */}
         <div className="flex flex-wrap gap-4">
-          <span className="bg-green-100 text-gray-800 px-6 py-2 rounded-full font-medium">
+          <span className="bg-[#CFE7CB] text-black px-6 py-2 rounded-full font-medium">
             26+ IBJJF Titles since 2007
           </span>
-          <span className="bg-green-100 text-gray-800 px-6 py-2 rounded-full font-medium">
+          <span className="bg-[#CFE7CB] text-black px-6 py-2 rounded-full font-medium">
             World Champion at Blue Belt (2x)
           </span>
-          <span className="bg-green-100 text-gray-800 px-6 py-2 rounded-full font-medium">
+          <span className="bg-[#CFE7CB] text-black px-6 py-2 rounded-full font-medium">
             17 Years Competing
           </span>
-          <span className="bg-green-100 text-gray-800 px-6 py-2 rounded-full font-medium">
+          <span className="bg-[#CFE7CB] text-black px-6 py-2 rounded-full font-medium">
             Spider/Lasso Guard Specialist
           </span>
         </div>
