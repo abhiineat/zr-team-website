@@ -125,48 +125,59 @@ export default function Schedule() {
       </h2>
 
       {/* --- Mobile View --- */}
-      <div className="md:hidden bg-green-100 rounded-xl p-4 shadow-sm">
-        <div className="flex justify-between items-center mb-4">
-          <span className="text-green-800 font-semibold">Select Day</span>
-          <button
-            className="flex items-center gap-2 bg-white px-4 py-2 rounded-md shadow-sm border border-gray-200"
-            onClick={() => {
-              const current = days.indexOf(selectedDay);
-              const next = (current + 1) % days.length;
-              setSelectedDay(days[next]);
-            }}
-          >
-            <span className="font-medium">{selectedDay}</span>
-            <ChevronDown className="w-4 h-4 text-gray-700" />
-          </button>
+     {/* --- Mobile View --- */}
+<div className="md:hidden bg-[#CFE7CB] rounded-xl p-4 shadow-sm">
+  {/* Day Selector */}
+  <div className="flex justify-between items-center mb-4">
+    <span className="text-green-800 font-semibold">Select Day</span>
+
+    <div className="relative">
+      <select
+        className="appearance-none bg-white pl-4 pr-10 py-2 rounded-md shadow-sm border border-gray-300 text-gray-800 font-medium"
+        value={selectedDay}
+        onChange={(e) => setSelectedDay(e.target.value)}
+      >
+        {days.map((day) => (
+          <option key={day} value={day}>
+            {day}
+          </option>
+        ))}
+      </select>
+
+      <ChevronDown className="w-4 h-4 text-gray-700 absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none" />
+    </div>
+  </div>
+
+  {scheduleData[selectedDay].map((item, i) => (
+    <div key={i} className="mb-3 flex">
+      {/* Left PERIOD LABEL */}
+      <div className="w-20 bg-[#DCEFD8] text-green-900 font-semibold flex items-center justify-center text-sm rounded-l-lg">
+        {item.period}
+      </div>
+
+      {/* Right CLASS CARD */}
+      <div className="flex-1 bg-white border border-gray-200 rounded-r-lg p-4 text-center shadow-sm">
+        <Image
+          src={item.icon}
+          alt={item.title}
+          width={40}
+          height={40}
+          className="mx-auto mb-2"
+        />
+
+        <div className={`${item.color} font-semibold text-lg`}>
+          {item.title}
         </div>
 
-        {scheduleData[selectedDay].map((item, i) => (
-          <div key={i} className="mb-6">
-            <div className="bg-green-50 rounded-lg p-4 border border-green-200">
-              <h3 className="text-sm font-semibold text-green-900 mb-2">
-                {item.period}
-              </h3>
-              <div className="bg-white rounded-lg p-4 border border-gray-200 text-center flex flex-col items-center justify-center">
-                <Image
-                  src={item.icon}
-                  alt={item.title}
-                  width={40}
-                  height={40}
-                  className="mb-2"
-                />
-                <div className={`${item.color} font-semibold text-lg`}>
-                  {item.title}
-                </div>
-                {item.subtitle && (
-                  <p className="text-gray-700 text-sm mb-1">{item.subtitle}</p>
-                )}
-                <p className="text-gray-600 text-sm">{item.time}</p>
-              </div>
-            </div>
-          </div>
-        ))}
+        {item.subtitle && (
+          <p className="text-gray-700 text-sm">{item.subtitle}</p>
+        )}
+
+        <p className="text-gray-600 text-sm mt-1">{item.time}</p>
       </div>
+    </div>
+  ))}
+</div>
 
       {/* --- Desktop View --- */}
       <div className="hidden md:block">
