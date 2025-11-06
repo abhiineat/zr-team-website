@@ -70,9 +70,9 @@ export default function Navbar() {
             </div>
           </div>
 
-          <a href="#schedule" className="hover:text-green-400 pt-1 transition-colors">
+          <Link href="/schedule" className="hover:text-green-400 pt-1 transition-colors">
             Schedule
-          </a>
+          </Link>
           <a href="#instructors" className="hover:text-green-400 pt-1 transition-colors">
             Instructors
           </a>
@@ -125,9 +125,9 @@ export default function Navbar() {
           <Link href="/programs/future-champions" className="block hover:text-green-400">
             Programs
           </Link>
-          <a href="#schedule" className="block hover:text-green-400">
+          <Link href="/schedule" className="block hover:text-green-400">
             Schedule
-          </a>
+          </Link>
           <a href="#instructors" className="block hover:text-green-400">
             Instructors
           </a>
