@@ -173,10 +173,10 @@ export default function Schedule() {
         <div className="overflow-x-auto border border-gray-200 rounded-xl shadow-sm">
           <table className="min-w-full border-collapse">
             <thead>
-              <tr className="bg-green-100 text-green-900">
-                <th className="py-3 px-4 text-left">Periods</th>
+              <tr className="bg-[#CFE7CB] text-[#077340] ">
+                <th className="py-3 px-4 text-left font-[400]">Periods</th>
                 {days.map((day) => (
-                  <th key={day} className="py-3 px-4 text-left">
+                  <th key={day} className="py-3 px-4 text-center font-[400]">
                     {day}
                   </th>
                 ))}
@@ -185,7 +185,7 @@ export default function Schedule() {
             <tbody>
               {["Evening", "Night"].map((period) => (
                 <tr key={period} className="border-t border-gray-200">
-                  <td className="bg-green-50 text-green-900 font-semibold px-4 py-4 align-top w-24">
+                  <td className="bg-[#CFE7CB] text-[#077340] font-[400] px-4 py-4 align-center w-24">
                     {period}
                   </td>
                   {days.map((day) => (
