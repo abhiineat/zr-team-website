@@ -13,16 +13,16 @@ export default function Navbar() {
     <nav className="fixed top-4 left-1/2 transform -translate-x-1/2 w-[90%] md:w-[90%] z-50 bg-black/40 backdrop-blur-sm text-white py-2 px-4 rounded-full shadow-lg border border-white/10">
       <div className="flex justify-between items-center">
         {/* Logo */}
-        <div className="flex items-center">
-          <Image
-            src={logo}
-            alt="BJJ Club Logo"
-            width={45}
-            height={45}
-            className="rounded-full"
-            priority
-          />
-        </div>
+        <Link href="/" aria-label="Go to homepage">
+        <Image
+          src={logo}
+          alt="BJJ Club Logo"
+          width={45}
+          height={45}
+          className="rounded-full cursor-pointer transition-transform hover:scale-105"
+          priority
+        />
+      </Link>
 
         {/* Desktop Nav Links */}
         <div className="hidden md:flex space-x-8 text-base font-semibold relative">
