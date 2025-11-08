@@ -22,10 +22,10 @@ export default function HeroSection() {
       </div>
 
       {/* ✨ Content Wrapper */}
-      <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-10 md:px-16 lg:px-24 pt-28 md:pt-36 pb-10 flex flex-col justify-center">
+      <div className="relative z-10 max-w-[1600px] mx-auto px-4 sm:px-8 md:px-14 lg:px-20 pt-28 md:pt-36 pb-10 flex flex-col justify-center">
         {/* 🥋 Heading */}
         <motion.h1
-          className="font-montserrat text-5xl md:text-7xl font-[500] leading-tight"
+          className="font-montserrat text-5xl md:text-7xl font-[500] leading-tight max-w-[1100px]"
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, ease: "easeOut" }}
@@ -40,7 +40,7 @@ export default function HeroSection() {
 
         {/* ✨ Subtitle */}
         <motion.p
-          className="mt-4 text-lg md:text-xl text-gray-200"
+          className="mt-4 text-lg md:text-xl text-gray-200 max-w-[900px]"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3, duration: 0.8 }}
@@ -64,7 +64,7 @@ export default function HeroSection() {
         </motion.div>
 
         {/* 🧩 Info Cards Section */}
-        <div className="mt-16 flex flex-col md:flex-row flex-wrap gap-6 justify-start md:justify-between">
+        <div className="mt-20 flex flex-col lg:flex-row flex-wrap gap-6 justify-start lg:justify-between w-full">
           {[
             {
               id: 1,
@@ -103,7 +103,7 @@ export default function HeroSection() {
                 </>
               ),
               className:
-                "bg-white text-black p-5 rounded-xl shadow-md border border-gray-200",
+                "bg-white text-black p-6 rounded-xl shadow-md border border-gray-200",
             },
             {
               id: 2,
@@ -125,7 +125,7 @@ export default function HeroSection() {
                   <h3 className="text-white font-semibold text-lg">
                     Checkout our Facilities
                   </h3>
-                  <div className="mt-3 relative w-full h-36 rounded-xl overflow-hidden">
+                  <div className="mt-3 relative w-full h-40 rounded-xl overflow-hidden">
                     <Image
                       src="/facility.webp"
                       alt="Facility"
@@ -153,12 +153,12 @@ export default function HeroSection() {
                   </div>
                 </>
               ),
-              className: "bg-green-700 p-5 rounded-xl shadow-lg text-white",
+              className: "bg-green-700 p-6 rounded-xl shadow-lg text-white",
             },
           ].map((card, i) => (
             <motion.div
               key={card.id}
-              className={`${card.className} w-full md:w-[calc(33.333%-1rem)] flex flex-col justify-between`}
+              className={`${card.className} w-full lg:w-[31%] flex flex-col justify-between`}
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: i * 0.2, duration: 0.8 }}
