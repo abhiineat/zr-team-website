@@ -73,15 +73,15 @@ export default function Navbar() {
           <Link href="/schedule" className="hover:text-green-400 pt-1 transition-colors">
             Schedule
           </Link>
-          <a href="#instructors" className="hover:text-green-400 pt-1 transition-colors">
+          <Link href="/instructor" className="hover:text-green-400 pt-1 transition-colors">
             Instructors
-          </a>
+          </Link>
           <a href="#schools" className="hover:text-green-400 pt-1 transition-colors">
             Our Schools
           </a>
-          <a href="#facilities" className="hover:text-green-400 pt-1 transition-colors">
+          <Link href="/facilities" className="hover:text-green-400 pt-1 transition-colors">
             Facilities
-          </a>
+          </Link>
         </div>
 
         {/* Contact Button (Desktop) */}
@@ -128,15 +128,15 @@ export default function Navbar() {
           <Link href="/schedule" className="block hover:text-green-400">
             Schedule
           </Link>
-          <a href="#instructors" className="block hover:text-green-400">
+          <Link href="/instructor" className="block hover:text-green-400">
             Instructors
-          </a>
+          </Link>
           <a href="#schools" className="block hover:text-green-400">
             Our Schools
           </a>
-          <a href="#facilities" className="block hover:text-green-400">
+          <Link href="/facilities" className="block hover:text-green-400">
             Facilities
-          </a>
+          </Link>
           <a href="#contact" className="block hover:text-green-400">
             Contact Us
           </a>

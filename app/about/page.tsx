@@ -1,5 +1,4 @@
 "use client";
-import React from "react";
 import Navbar from "../components/Navbar";
 import Image from "next/image";
 import Footer from "../components/Footer";
@@ -184,6 +183,7 @@ export default function About() {
 </div>
 
 </section>
+
 
       </main>
 
