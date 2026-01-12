@@ -57,61 +57,94 @@ export default function Page() {
 
         {/* 🧩 Facilities Details Section */}
         <motion.section
-          id="facilities"
-          className="flex flex-col md:flex-row items-center justify-between gap-12  px-6 md:px-20 py-20 bg-[#FBF8F8]"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.5, ease: "easeOut" }}
-          viewport={{ once: true }}
-        >
-          <div className="flex-1 max-w-2xl">
-            <p className="text-green-600 font-medium mb-3">Our facilities</p>
-            <h2 className="text-4xl md:text-5xl font-semibold text-gray-900 mb-8 leading-tight">
-              The perfect environment to <br />
-              <span className="font-bold text-black">push your limits and grow.</span>
-            </h2>
+  id="facilities"
+  className="px-6 md:px-20 py-20 bg-[#FBF8F8]"
+  initial={{ opacity: 0 }}
+  whileInView={{ opacity: 1 }}
+  transition={{ duration: 0.5, ease: "easeOut" }}
+  viewport={{ once: true }}
+>
+  {/* TOP HEADING — CENTERED */}
+  <div className="max-w-4xl mx-auto text-center mb-16">
+    <p className="text-green-600 font-medium mb-3">Our facilities</p>
 
-            <h3 className="text-3xl font-bold text-black mb-4">
-              Outdoor Strength Zone
-            </h3>
+    <h2 className="text-4xl md:text-5xl font-[400] font-monteserrat text-gray-900 leading-tight">
+      The perfect environment to <br />
+      <span className="font-[700] text-black">
+        push your limits and grow.
+      </span>
+    </h2>
+  </div>
 
-            <p className="text-gray-700 leading-relaxed text-lg mb-10">
-              A Brazilian jiu-jitsu black belt, a rank awarded by his father José
-              Olimpio (also known as Zé Radiola). Widely regarded as one of his
-              generation’s best feather/lightweight competitors, a reputation earned by
-              conquering important titles on the International Brazilian Jiu-Jitsu
-              Federation (IBJJF) calendar, Rocha is also one of the top representatives
-              of the ZR Team in the sport’s worldwide circuit.
-            </p>
+  {/* CONTENT + GRID */}
+  <div className="flex flex-col md:flex-row gap-12 items-start">
+    
+    {/* LEFT CONTENT */}
+    <div className="flex-1 max-w-2xl">
+      <h3 className="text-5xl font-[600] text-black mb-4">
+        Indoor Training Facility
+      </h3>
 
-            <div className="flex flex-wrap gap-4">
-              {[
-                "26+ IBJJF Titles since 2007",
-                "World Champion at Blue Belt (2x)",
-                "17 Years Competing",
-                "Spider/Lasso Guard Specialist",
-              ].map((text, i) => (
-                <span
-                  key={i}
-                  className="bg-[#CFE7CB] text-black px-6 py-2 rounded-full font-medium"
-                >
-                  {text}
-                </span>
-              ))}
-            </div>
-          </div>
+      <p className="text-gray-700 leading-relaxed text-lg mb-6">
+        Our indoor Brazilian Jiu-Jitsu facility is thoughtfully designed to
+        deliver a safe, comfortable, and high-performance training experience
+        for students of all levels. With fully padded professional tatami mats,
+        spacious training areas, proper ventilation, and balanced lighting, the
+        space supports both focused technical practice and high-intensity live
+        sparring.
+      </p>
 
-          <div className="flex-1">
+      <p className="text-gray-700 leading-relaxed text-lg mb-10">
+        A controlled indoor environment allows athletes to train consistently
+        year-round, maintain peak conditioning, and sharpen technique without
+        weather disruptions or external distractions.
+      </p>
+
+      <div className="flex flex-wrap gap-4">
+        {[
+          "Clean & Hygienic Training Space",
+          "Professional Tatami Mats",
+          "Well-Lit & Ventilated",
+          "Safe for Kids & Adults",
+        ].map((text, i) => (
+          <span
+            key={i}
+            className="bg-[#CFE7CB] text-black px-6 py-2 rounded-full font-medium"
+          >
+            {text}
+          </span>
+        ))}
+      </div>
+    </div>
+
+    {/* RIGHT — 4 IMAGE GRID */}
+    <div className="flex-1 w-full">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        {[
+          "/facility1.webp",
+          "/facility2.webp",
+          "/facility3.webp",
+          "/facility4.webp",
+        ].map((src, i) => (
+          <div
+            key={i}
+            className="relative w-full h-56 rounded-2xl overflow-hidden shadow-md"
+          >
             <Image
-              src={coachImage}
-              alt="Coach Guilherme Rocha"
-              width={600}
-              height={500}
-              className="rounded-2xl object-cover w-full h-auto shadow-md"
-              priority
+              src={src}
+              alt={`Facility ${i + 1}`}
+              fill
+              className="object-cover"
+              sizes="(max-width: 640px) 100vw, 50vw"
             />
           </div>
-        </motion.section>
+        ))}
+      </div>
+    </div>
+
+  </div>
+</motion.section>
+
 
         {/* 💰 Pricing Section */}
         <PricingSection/>
