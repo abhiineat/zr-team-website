@@ -91,7 +91,7 @@ export default function CoachSection() {
           alt="Coach Guilherme Rocha"
           width={600}
           height={500}
-          className="rounded-2xl object-cover w-full h-auto shadow-md"
+          className="rounded-xl object-cover w-full h-full shadow-md"
           priority
         />
       </motion.div>

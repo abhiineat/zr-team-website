@@ -75,7 +75,7 @@ export default function Testimonial() {
               </div>
 
               {/* Title */}
-              <h4 className="font-semibold text-lg mb-3">{t.title}</h4>
+              <h4 className="font-[700] text-xl mb-3">{t.title}</h4>
 
               {/* Text */}
               <p className="text-gray-700 text-base leading-relaxed mb-4">
