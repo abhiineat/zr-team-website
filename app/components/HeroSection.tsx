@@ -123,7 +123,7 @@ export default function HeroSection() {
                     
                     {/* LEFT: Text + Play Button */}
                     <div className="flex flex-col justify-between flex-1">
-                      <h3 className="text-white font-semibold text-xl">
+                      <h3 className="text-white font-semibold text-2xl">
                         View our Instructors
                       </h3>
             
