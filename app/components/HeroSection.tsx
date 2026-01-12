@@ -58,12 +58,20 @@ export default function HeroSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.6, duration: 0.8 }}
         >
-          <button className="bg-white text-black px-6 py-3 rounded-full font-semibold shadow-lg hover:bg-gray-200 transition">
-            Explore Programs
-          </button>
-          <button className="bg-[#077340] text-white px-6 py-3 rounded-full font-semibold shadow-lg hover:bg-green-700 transition">
-            Become a member
-          </button>
+          <div className="flex gap-4">
+  <Link href="/programs/advanced">
+    <button className="bg-white text-black px-6 py-3 rounded-full font-semibold shadow-lg hover:bg-gray-200 transition">
+      Explore Programs
+    </button>
+  </Link>
+
+  <Link href="/contact">
+    <button className="bg-[#077340] text-white px-6 py-3 rounded-full font-semibold shadow-lg hover:bg-green-700 transition">
+      Become a member
+    </button>
+  </Link>
+</div>
+
         </motion.div>
 
         {/* 🧩 Info Cards Section */}
