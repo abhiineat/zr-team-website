@@ -9,7 +9,7 @@ export default function Page() {
   return (
     <>
       <Navbar />
-      <main className="bg-[#FBF8F8] text-gray-900 overflow-hidden">
+      <main className="bg-[#FBF8F8] text-gray-900 py-8 md:py-12 overflow-hidden">
         <WorldwideSection/>
         <ProgramsSection/>
         <PricingSection/>

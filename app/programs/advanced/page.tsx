@@ -12,7 +12,7 @@ export default function FutureChampionsPage() {
       <Navbar />
 
       {/* ✅ Main Content */}
-      <main className="max-w-6xl pt-32 mx-auto py-12">
+      <main className=" pt-32 mx-auto py-12">
         {/* Hero Section */}
         <ProgramHero
           title="Advanced Program"
@@ -25,36 +25,37 @@ export default function FutureChampionsPage() {
         <ProgramOverview
   title="Class Overview"
   description={[
-    "The ZR TEAM Future Champions Program was created to provide children aged 3–15 with an environment that allows them to experience and understand core values such as focus, discipline, persistence, cooperation, and respect.",
-    "As a contact sport, ZR TEAM Brazilian Jiu-Jitsu offers a challenging yet safe and nurturing environment for children to develop into real-life champions. The benefits of continuous practice extend far beyond accomplishments on the mats.",
-    "Age Groups:",
-    "• Little Champions I: 3–6 years old",
-    "• Juniors: 7–9 years old",
-    "• Teens: 10–14 years old.",
+    "The ZR TEAM Program Structure defines three main stages of development for students: the Fundamentals Program and the Advanced Program. These stages indicate different maturity levels, and students progress from one to the other naturally.",
+    "What Comes After Mastering the Fundamentals?",
+    "The Advanced Program is built on high-level techniques and drills that shape the student's game flow. It focuses on developing reflexes, speed, and reaction time, as well as smooth transitions between techniques.",
+    "After spending a few months in the ZR Advanced Program, students typically experience a deeper involvement in ZR's philosophy. They develop stronger bonds with training partners and cultivate discipline and commitment to healthy habits, keeping them in good shape.",
+    "Classes in the Advanced Program follow a defined structure and curriculum, taking a broad and open-minded approach. Techniques from different grappling styles such as wrestling, judo, sambo, and ZR TEAM Brazilian Jiu-Jitsu are incorporated.",
   ]}
+  
 />
 
-<section className="max-w-6xl mx-auto px-6 md:px-8 py-4 flex flex-col md:flex-row items-start gap-10">
+<section className="px-6 sm:px-6 md:px-20 mx-auto px-6 md:px-8 py-4 flex flex-col md:flex-row items-start gap-10">
       {/* Left side (Text sections) */}
       <div className="flex-1 space-y-6">
         <ProgramSection
-          title="Key Benefits"
+          title="Cross-Training Integration"
           items={[
-            "Focus – Enhanced concentration and attention span",
-            "Discipline – Structure and self-control development",
-            "Persistence – Learning to overcome challenges",
-            "Cooperation – Teamwork and social interaction skills",
-            "Respect – For instructors, peers, and themselves",
+            "Learn techniques from wrestling, judo, sambo, and ZR TEAM Brazilian Jiu-Jitsu",
+            "Experience broad and open-minded training approach",
+            "Integrate different grappling styles into your game",
+            "Develop well-rounded skill set",
           ]}
+          
         />
         <ProgramSection
-          title="Physical & Mental Growth"
+          title="Competitive Preparation"
           items={[
-            "Strength, flexibility, and fitness gains",
-            "Self-defense skills development",
-            "Overall enhancement in focus and energy",
-            "Results that transcend mere physical gains",
+            "Step up to participate in Brazilian Jiu-Jitsu competitions",
+            "Train with competition-focused mindset",
+            "Develop mental toughness and strategic thinking",
+            "Access advanced competition techniques",
           ]}
+          
         />
       </div>
 
@@ -62,11 +63,11 @@ export default function FutureChampionsPage() {
       <div className="flex-1">
         <div className="overflow-hidden rounded-xl shadow-md">
           <Image
-            src="/coach.webp" // replace with your actual image path
+            src="/advance-1.png" // replace with your actual image path
             alt="Instructors"
             width={600}
             height={700}
-            className="w-full h-auto object-cover"
+            className="w-full h-[30.5rem] object-cover"
           />
         </div>
       </div>

@@ -11,7 +11,7 @@ export default function About() {
 
       <main className="bg-[#FBF8F8] text-gray-900">
         {/* ✅ Hero Section (No Motion) */}
-        <section className="max-w-7xl mx-auto px-4 sm:px-6 md:px-10 py-24 md:py-28 text-left overflow-hidden">
+        <section className="px-6 sm:px-6 md:px-20 mx-auto px-4 sm:px-6 md:px-10 py-24 md:py-28 text-left overflow-hidden">
           <div className="flex flex-col md:flex-row items-start md:items-center justify-between mb-10 gap-8">
             {/* Heading */}
             <motion.div
@@ -65,7 +65,7 @@ export default function About() {
         </section>
 
         {/* ✅ History Section (Motion kept) */}
-        <section className="max-w-6xl mx-auto px-4 sm:px-6 md:px-10 py-16">
+        <section className="px-6 sm:px-6 md:px-20 mx-auto px-4 sm:px-6 md:px-10 py-16">
           <div className="grid md:grid-cols-2 gap-10 items-center">
             {/* Left side: heading + content */}
             <motion.div
@@ -118,7 +118,7 @@ export default function About() {
         </section>
 
         {/* ✅ Mission / Vision / Values */}
-        <section className="max-w-6xl mx-auto px-4 sm:px-6 md:px-10 py-20">
+        <section className="px-6 sm:px-6 md:px-20 mx-auto px-4 sm:px-6 md:px-10 py-20">
           <motion.div
             className="relative rounded-3xl overflow-hidden shadow-lg"
             initial={{ opacity: 0, scale: 0.95 }}
@@ -127,7 +127,7 @@ export default function About() {
             viewport={{ once: true }}
           >
             <div
-              className="h-full w-full bg-cover bg-center relative"
+              className="h-[23rem] w-full bg-cover bg-center relative"
               style={{ backgroundImage: "url('/mission.webp')" }}
             >
               <div className="absolute inset-0 bg-black/40"></div>
@@ -150,7 +150,7 @@ export default function About() {
                   ].map((card, i) => (
                     <motion.div
                       key={i}
-                      className="bg-white/15 border border-white/30 backdrop-blur-xs text-white p-4 rounded-xl"
+                      className="bg-white/15 border border-white/30 backdrop-blur-xs text-white p-8 rounded-xl"
                       initial={{ opacity: 0, y: 40 }}
                       whileInView={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.8, delay: i * 0.2 }}
@@ -169,7 +169,7 @@ export default function About() {
         </section>
 
         {/* ✅ Instructors Section */}
-        <section className="max-w-6xl mx-auto py-20 px-6 text-center">
+        <section className="px-6 sm:px-6 md:px-20 mx-auto py-20 px-6 text-center">
           <div className="mb-12">
             <motion.h3
               className="text-[#077340] font-semibold mb-2 uppercase tracking-wide"

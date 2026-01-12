@@ -16,7 +16,7 @@ export default function ProgramHero({
   ageGroup,
 }: ProgramHeroProps) {
   return (
-    <section className="max-w-6xl mx-auto mb-20 text-center overflow-hidden">
+    <section className="px-6 md:px-16 mb-20 text-center overflow-hidden">
       {/* 🎯 Age Tag */}
       {ageGroup && (
         <motion.div
@@ -58,13 +58,13 @@ export default function ProgramHero({
         animate={{ opacity: 1, scale: 1 }}
         transition={{ delay: 0.4, duration: 1, ease: "easeOut" }}
       >
-        <div className="overflow-hidden rounded-2xl shadow-md">
+        <div className="overflow-hidden  shadow-md">
           <Image
             src={image}
             alt={title}
             width={1600}
             height={900}
-            className="w-full h-auto object-cover transition-transform duration-700 ease-out"
+            className="w-full h-[32rem] object-cover transition-transform duration-700 ease-out"
             priority
           />
         </div>

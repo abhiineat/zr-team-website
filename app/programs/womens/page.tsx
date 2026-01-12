@@ -12,12 +12,12 @@ export default function FutureChampionsPage() {
       <Navbar />
 
       {/* ✅ Main Content */}
-      <main className="max-w-6xl pt-32 mx-auto py-12">
+      <main className=" pt-32 mx-auto py-12">
         {/* Hero Section */}
         <ProgramHero
           title="Women's Program"
           subtitle="Building Character, Confidence & Champions Through BJJ"
-          image="/future-champ.webp"
+          image="/women.jpg"
           ageGroup="Ages 3–15"
         />
 
@@ -25,35 +25,39 @@ export default function FutureChampionsPage() {
         <ProgramOverview
   title="Class Overview"
   description={[
-    "The ZR TEAM Future Champions Program was created to provide children aged 3–15 with an environment that allows them to experience and understand core values such as focus, discipline, persistence, cooperation, and respect.",
-    "As a contact sport, ZR TEAM Brazilian Jiu-Jitsu offers a challenging yet safe and nurturing environment for children to develop into real-life champions. The benefits of continuous practice extend far beyond accomplishments on the mats.",
-    "Age Groups:",
-    "• Little Champions I: 3–6 years old",
-    "• Juniors: 7–9 years old",
-    "• Teens: 10–14 years old.",
+    "The ZR TEAM Women's Program is designed to provide a safe and comfortable environment specifically for women to learn Brazilian Jiu-Jitsu.",
+    "In addition to all the classes offered in the Adults ZR TEAM Program Structure, our school provides a series of classes specifically designed to introduce women to the art of Brazilian Jiu-Jitsu.",
+    "As a martial art crafted to empower the weaker to overcome the stronger, BJJ is an ideal choice for women seeking to learn self-defense.",
+    "The ZR TEAM Women's Program integrates a comprehensive self-defense curriculum with a focus on drills that replicate realistic attack and escape scenarios.",
+    "Specialized Classes Include:",
+    "• Rape Prevention classes",
+    "• BJJ Conditioning sessions",
+    "• Social gatherings to foster strong bonds",
+    "• Classes tailored specifically for women's needs",
   ]}
+  
 />
 
-<section className="max-w-6xl mx-auto px-6 md:px-8 py-4 flex flex-col md:flex-row items-start gap-10">
+<section className="px-6 sm:px-6 md:px-20 mx-auto px-6 md:px-8 py-4 flex flex-col md:flex-row items-start gap-10">
       {/* Left side (Text sections) */}
       <div className="flex-1 space-y-6">
         <ProgramSection
-          title="Key Benefits"
+          title="Self-Defense Mastery"
           items={[
-            "Focus – Enhanced concentration and attention span",
-            "Discipline – Structure and self-control development",
-            "Persistence – Learning to overcome challenges",
-            "Cooperation – Teamwork and social interaction skills",
-            "Respect – For instructors, peers, and themselves",
+            "Learn how to protect yourself from common attacks",
+            "Develop awareness and self-confidence to handle typical assaults against women",
+            "Comprehensive self-defense curriculum with realistic scenarios",
+            "Techniques that empower the weaker to overcome the stronger",
           ]}
+          
         />
         <ProgramSection
-          title="Physical & Mental Growth"
+          title="Community & Support"
           items={[
-            "Strength, flexibility, and fitness gains",
-            "Self-defense skills development",
-            "Overall enhancement in focus and energy",
-            "Results that transcend mere physical gains",
+            "Become part of the \"ZR Family\"",
+            "Safe and comfortable training environment",
+            "Strong bonds among members through specialized activities",
+            "Social gatherings that foster community connections",
           ]}
         />
       </div>
@@ -62,11 +66,11 @@ export default function FutureChampionsPage() {
       <div className="flex-1">
         <div className="overflow-hidden rounded-xl shadow-md">
           <Image
-            src="/coach.webp" // replace with your actual image path
+            src="/women-1.jpg" // replace with your actual image path
             alt="Instructors"
             width={600}
             height={700}
-            className="w-full h-auto object-cover"
+            className="w-full h-[33.5rem] object-cover"
           />
         </div>
       </div>

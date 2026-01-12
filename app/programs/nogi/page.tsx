@@ -12,12 +12,12 @@ export default function FutureChampionsPage() {
       <Navbar />
 
       {/* ✅ Main Content */}
-      <main className="max-w-6xl pt-32 mx-auto py-12">
+      <main className="pt-32 mx-auto py-12">
         {/* Hero Section */}
         <ProgramHero
           title="No-GI Program"
           subtitle="Building Character, Confidence & Champions Through BJJ"
-          image="/future-champ.webp"
+          image="/nogi.png"
           ageGroup="Ages 3–15"
         />
 
@@ -25,36 +25,35 @@ export default function FutureChampionsPage() {
         <ProgramOverview
   title="Class Overview"
   description={[
-    "The ZR TEAM Future Champions Program was created to provide children aged 3–15 with an environment that allows them to experience and understand core values such as focus, discipline, persistence, cooperation, and respect.",
-    "As a contact sport, ZR TEAM Brazilian Jiu-Jitsu offers a challenging yet safe and nurturing environment for children to develop into real-life champions. The benefits of continuous practice extend far beyond accomplishments on the mats.",
-    "Age Groups:",
-    "• Little Champions I: 3–6 years old",
-    "• Juniors: 7–9 years old",
-    "• Teens: 10–14 years old.",
+    "The ZR TEAM Nogi program offers both newcomers and seasoned grapplers the chance to delve into the experience of training without a kimono. The fundamental difference, the lack of a gi and thus grips, creates a special environment where control over an opponent is much harder to obtain, while escaping threats is much easier.",
+    "This creates a unique scenario that teaches students more precision while on the offense and gives them more opportunities to try riskier techniques as mistakes are not as punishing.",
+    "The ZR Team No-GI teaches students the means of grip fighting without the gi, as well as adds a different perspective to the techniques learned during gi training.",
+    "The rulesets utilized during these sessions are looser than during gi trainings, offering white belts to black belts the opportunity to learn various holds and submissions that are usually banned in gi competition.",
   ]}
+  
 />
 
-<section className="max-w-6xl mx-auto px-6 md:px-8 py-4 flex flex-col md:flex-row items-start gap-10">
+<section className="px-6 sm:px-6 md:px-20 mx-auto px-6 md:px-8 py-4 flex flex-col md:flex-row items-start gap-10">
       {/* Left side (Text sections) */}
       <div className="flex-1 space-y-6">
         <ProgramSection
-          title="Key Benefits"
+          title="Advanced Submission Arsenal"
           items={[
-            "Focus – Enhanced concentration and attention span",
-            "Discipline – Structure and self-control development",
-            "Persistence – Learning to overcome challenges",
-            "Cooperation – Teamwork and social interaction skills",
-            "Respect – For instructors, peers, and themselves",
+            "Learn submissions generally banned in gi competition (heel hooks, cranks, and many more)",
+            "Experience looser rulesets with expanded submission opportunities",
+            "Develop more offensive approach to grappling",
+            "Try riskier techniques as mistakes are less punishing",
           ]}
+          
         />
         <ProgramSection
-          title="Physical & Mental Growth"
+          title="Wrestling Integration"
           items={[
-            "Strength, flexibility, and fitness gains",
-            "Self-defense skills development",
-            "Overall enhancement in focus and energy",
-            "Results that transcend mere physical gains",
+            "Utilize battle-proven takedowns rooted in Greco-Roman and freestyle wrestling",
+            "Experience wrestling-style scrambles and transitions",
+            "Learn takedowns applicable to real-world scenarios",
           ]}
+          
         />
       </div>
 
@@ -62,11 +61,11 @@ export default function FutureChampionsPage() {
       <div className="flex-1">
         <div className="overflow-hidden rounded-xl shadow-md">
           <Image
-            src="/coach.webp" // replace with your actual image path
+            src="/nogi-1.jpg" // replace with your actual image path
             alt="Instructors"
             width={600}
             height={700}
-            className="w-full h-auto object-cover"
+            className="w-full h-[31.5rem] object-cover"
           />
         </div>
       </div>

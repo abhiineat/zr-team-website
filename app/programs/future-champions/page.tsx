@@ -12,12 +12,12 @@ export default function FutureChampionsPage() {
       <Navbar />
 
       {/* ✅ Main Content */}
-      <main className="max-w-6xl pt-32 mx-auto py-12">
+      <main className=" pt-32 mx-auto py-12">
         {/* Hero Section */}
         <ProgramHero
           title="Future Champions"
           subtitle="Building Character, Confidence & Champions Through BJJ"
-          image="/future-champ.webp"
+          image="/future.jpg"
           ageGroup="Ages 3–15"
         />
 
@@ -34,7 +34,7 @@ export default function FutureChampionsPage() {
   ]}
 />
 
-<section className="max-w-6xl mx-auto px-6 md:px-8 py-4 flex flex-col md:flex-row items-start gap-10">
+<section className="px-6 sm:px-6 md:px-20 mx-auto px-6 md:px-8 py-4 flex flex-col md:flex-row items-start gap-10">
       {/* Left side (Text sections) */}
       <div className="flex-1 space-y-6">
         <ProgramSection
@@ -60,13 +60,13 @@ export default function FutureChampionsPage() {
 
       {/* Right side (Image) */}
       <div className="flex-1">
-        <div className="overflow-hidden rounded-xl shadow-md">
+        <div className="overflow-hidden shadow-md">
           <Image
-            src="/coach.webp" // replace with your actual image path
+            src="/future-2.webp" // replace with your actual image path
             alt="Instructors"
             width={600}
             height={700}
-            className="w-full h-auto object-cover"
+            className="w-full h-[31rem] object-cover"
           />
         </div>
       </div>

@@ -8,7 +8,7 @@ interface ProgramOverviewProps {
 
 export default function ProgramOverview({ title, description }: ProgramOverviewProps) {
   return (
-    <section className="max-w-5xl mx-auto mb-20 px-6 md:px-8 overflow-hidden">
+    <section className="px-6 sm:px-6 md:px-20 mx-auto mb-20 px-6 md:px-8 overflow-hidden">
       {/* ✨ Unified Motion Wrapper for Title + Content */}
       <motion.div
         initial="hidden"

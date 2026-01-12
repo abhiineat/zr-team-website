@@ -12,12 +12,12 @@ export default function FutureChampionsPage() {
       <Navbar />
 
       {/* ✅ Main Content */}
-      <main className="max-w-6xl pt-32 mx-auto py-12">
+      <main className="pt-32 mx-auto py-12">
         {/* Hero Section */}
         <ProgramHero
           title="Fundamentals Program"
           subtitle="Building Character, Confidence & Champions Through BJJ"
-          image="/future-champ.webp"
+          image="/fundamental.png"
           ageGroup="Ages 3–15"
         />
 
@@ -25,35 +25,32 @@ export default function FutureChampionsPage() {
         <ProgramOverview
   title="Class Overview"
   description={[
-    "The ZR TEAM Future Champions Program was created to provide children aged 3–15 with an environment that allows them to experience and understand core values such as focus, discipline, persistence, cooperation, and respect.",
-    "As a contact sport, ZR TEAM Brazilian Jiu-Jitsu offers a challenging yet safe and nurturing environment for children to develop into real-life champions. The benefits of continuous practice extend far beyond accomplishments on the mats.",
-    "Age Groups:",
-    "• Little Champions I: 3–6 years old",
-    "• Juniors: 7–9 years old",
-    "• Teens: 10–14 years old.",
+    "The Fundamentals Program focuses on the building blocks and basic principles of Brazilian Jiu-Jitsu. Students learn essential techniques and principles that form the foundation of their practice.",
+    "The ZR TEAM Fundamentals Program imparts these basic principles of effective fighting to individuals like yourself. Its structure condenses a vast array of Brazilian Jiu-Jitsu into core fundamental moves intelligently and safely combined to optimize your learning experience.",
+    "The practice of ZR TEAM Brazilian Jiu-Jitsu enables individuals to grasp these principles through an engaging process that includes instruction, observation, practice, appropriate feedback, live training, and competition.",
+    
   ]}
 />
 
-<section className="max-w-6xl mx-auto px-6 md:px-8 py-4 flex flex-col md:flex-row items-start gap-10">
+<section className="px-6 sm:px-6 md:px-20 mx-auto px-6 md:px-8 py-4 flex flex-col md:flex-row items-start gap-10">
       {/* Left side (Text sections) */}
       <div className="flex-1 space-y-6">
         <ProgramSection
-          title="Key Benefits"
+          title="Technical Foundation"
           items={[
-            "Focus – Enhanced concentration and attention span",
-            "Discipline – Structure and self-control development",
-            "Persistence – Learning to overcome challenges",
-            "Cooperation – Teamwork and social interaction skills",
-            "Respect – For instructors, peers, and themselves",
+            "Learn the fundamentals of Brazilian Jiu-Jitsu",
+            "Master the ZR Self-Defense System",
+            "Core fundamental moves combined intelligently and safely",
+            "Essential techniques and principles that form the foundation of practice",
           ]}
         />
         <ProgramSection
           title="Physical & Mental Growth"
           items={[
-            "Strength, flexibility, and fitness gains",
-            "Self-defense skills development",
-            "Overall enhancement in focus and energy",
-            "Results that transcend mere physical gains",
+            "Enhance focus, energy, and concentration",
+            "Enjoy significant improvements in your overall fitness level",
+            "Boost self-confidence",
+            "Overall enhancement in focus, energy, and general well-being",
           ]}
         />
       </div>
@@ -62,11 +59,11 @@ export default function FutureChampionsPage() {
       <div className="flex-1">
         <div className="overflow-hidden rounded-xl shadow-md">
           <Image
-            src="/coach.webp" // replace with your actual image path
+            src="/fundamental-1.png" // replace with your actual image path
             alt="Instructors"
             width={600}
             height={700}
-            className="w-full h-auto object-cover"
+            className="w-full h-[30.5rem] object-cover"
           />
         </div>
       </div>

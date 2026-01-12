@@ -34,7 +34,7 @@ export default function InstructorsSection() {
     ];
   
     return (
-      <section className="max-w-6xl mx-auto py-12 px-6 text-center">
+      <section className="px-6 sm:px-6 md:px-20 mx-auto py-12 px-6 text-center">
         {/* Heading */}
         <motion.div
           className="mb-12"

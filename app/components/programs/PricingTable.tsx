@@ -49,7 +49,7 @@ export default function PricingTable() {
   ];
 
   return (
-    <section className="max-w-6xl mx-auto px-6 md:px-8 py-16 overflow-hidden">
+    <section className="px-6 sm:px-6 md:px-20 mx-auto px-6 md:px-8 py-16 overflow-hidden">
       {/* 🏷️ Section Header */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
