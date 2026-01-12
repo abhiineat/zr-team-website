@@ -11,7 +11,7 @@ export default function About() {
 
       <main className="bg-[#FBF8F8] text-gray-900">
         {/* ✅ Hero Section (No Motion) */}
-        <section className="px-6 sm:px-6 md:px-20 mx-auto px-4 sm:px-6 md:px-10 py-24 md:py-28 text-left overflow-hidden">
+        <section className="px-6 sm:px-6 md:px-20 mx-auto px-4 sm:px-6 md:px-10 pt-24 md:pt-32 text-left overflow-hidden">
           <div className="flex flex-col md:flex-row items-start md:items-center justify-between mb-10 gap-8">
             {/* Heading */}
             <motion.div

@@ -50,7 +50,7 @@ const handleSubmit = async (e: React.FormEvent) => {
         <main className="bg-[#FBF8F8] text-gray-900 overflow-hidden">
         <motion.section
   id="contact"
-  className="bg-[#FBF8F8] px-6 md:px-24 md:pt-28 py-24"
+  className="bg-[#FBF8F8] px-6 md:px-24 md:pt-32 py-24"
   initial={{ opacity: 0 }}
   whileInView={{ opacity: 1 }}
   transition={{ duration: 0.4, ease: "easeOut" }}

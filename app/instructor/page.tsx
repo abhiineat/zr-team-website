@@ -16,7 +16,7 @@ export default function Page() {
         {/* 🥋 First Section (Team) — Very Minimal Animation */}
         <motion.section
           id="team"
-          className="flex flex-col md:flex-row items-center justify-between gap-12 px-6 md:px-24 py-24 bg-[#FBF8F8]"
+          className="flex flex-col md:flex-row items-center justify-between gap-12 px-6 md:px-24 md:pt-32 py-24 bg-[#FBF8F8]"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.3, ease: "easeOut" }}

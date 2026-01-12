@@ -15,7 +15,7 @@ export default function Page() {
       <main className="bg-[#FBF8F8] text-gray-900 overflow-hidden">
         {/* 🏋️ Facilities Hero Section */}
         <motion.section
-          className=" px-6 sm:px-6 md:px-20 py-24 md:py-28 text-left"
+          className=" px-6 sm:px-6 md:px-20 py-24 md:py-32 text-left"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.4, ease: "easeOut" }}
