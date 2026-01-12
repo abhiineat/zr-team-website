@@ -20,7 +20,7 @@ export default function Footer() {
               href="mailto:info@zrteamhm.com"
               className="font-bold underline underline-offset-6 hover:text-green-600"
             >
-              info@zrteamhm.com
+              infohopemills@gmail.com
             </a>
           </h3>
         </div>

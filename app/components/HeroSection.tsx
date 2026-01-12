@@ -2,8 +2,11 @@
 import { motion } from "motion/react";
 import Image from "next/image";
 import heroImage from "../../public/hero.webp";
+import TestimonialCarousel from "./TestimonialCarousel";
+import Link from "next/link";
 
 export default function HeroSection() {
+  
   return (
     <section className="relative w-full min-h-[90vh] text-white overflow-hidden">
       {/* 🖼️ Background Image with gradient overlay */}
@@ -58,7 +61,7 @@ export default function HeroSection() {
           <button className="bg-white text-black px-6 py-3 rounded-full font-semibold shadow-lg hover:bg-gray-200 transition">
             Explore Programs
           </button>
-          <button className="bg-green-600 text-white px-6 py-3 rounded-full font-semibold shadow-lg hover:bg-green-700 transition">
+          <button className="bg-[#077340] text-white px-6 py-3 rounded-full font-semibold shadow-lg hover:bg-green-700 transition">
             Become a member
           </button>
         </motion.div>
@@ -107,54 +110,54 @@ export default function HeroSection() {
             },
             {
               id: 2,
-              content: (
-                <>
-                  <p className="italic text-white text-lg">
-                    “The perfect place to train and connect!”
-                  </p>
-                  <p className="mt-3 text-gray-200">— Oscar Lindsey</p>
-                </>
-              ),
+              content: <TestimonialCarousel/>,
               className:
-                "bg-white/20 backdrop-blur-xs p-6 rounded-xl border border-white/20 text-center",
+                "bg-white/20 backdrop-blur-sm p-6 rounded-xl border border-white/20 text-center",
             },
+            
             {
               id: 3,
               content: (
-                <>
-                  <h3 className="text-white font-semibold text-lg">
-                    Checkout our Facilities
-                  </h3>
-                  <div className="mt-3 relative w-full h-40 rounded-xl overflow-hidden">
-                    <Image
-                      src="/facility.webp"
-                      alt="Facility"
-                      fill
-                      className="object-cover rounded-xl"
-                    />
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-md">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          fill="black"
-                          viewBox="0 0 24 24"
-                          strokeWidth={1.5}
-                          stroke="black"
-                          className="w-5 h-5"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            d="M5.25 5.25v13.5l13.5-6.75L5.25 5.25z"
-                          />
-                        </svg>
+                <Link href="/facilities" className="block h-full">
+                  <div className="flex h-full gap-4 cursor-pointer group">
+                    
+                    {/* LEFT: Text + Play Button */}
+                    <div className="flex flex-col justify-between flex-1">
+                      <h3 className="text-white font-semibold text-lg">
+                        Checkout our Facilities
+                      </h3>
+            
+                      <div className="mt-4">
+                        <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-md">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="black"
+                            viewBox="0 0 24 24"
+                            className="w-6 h-6"
+                          >
+                            <path d="M5.25 5.25v13.5l13.5-6.75L5.25 5.25z" />
+                          </svg>
+                        </div>
                       </div>
                     </div>
+            
+                    {/* RIGHT: Image */}
+                    <div className="relative w-44 h-40 rounded-xl overflow-hidden shrink-0">
+                      <Image
+                        src="/view.jpg"
+                        alt="Facility"
+                        fill
+                        className="object-cover transition-transform duration-500 group-hover:scale-105"
+                      />
+                    </div>
+            
                   </div>
-                </>
+                </Link>
               ),
-              className: "bg-green-700 p-6 rounded-xl shadow-lg text-white",
-            },
+              className: "bg-[#077340] p-6 rounded-xl shadow-lg text-white",
+            }
+            
+            ,
           ].map((card, i) => (
             <motion.div
               key={card.id}

@@ -3,6 +3,7 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Image from "next/image";
 import { motion } from "motion/react";
+import FaqSection from "../components/FapSection";
 
 export default function About() {
   return (
@@ -107,11 +108,11 @@ export default function About() {
               viewport={{ once: true }}
             >
               <Image
-                src="/coach.webp"
+                src="/tema.jpg"
                 alt="Zé Radiola"
                 width={600}
                 height={400}
-                className="object-cover w-full h-full"
+                className="object-cover w-full h-[28rem]"
               />
             </motion.div>
           </div>
@@ -186,73 +187,8 @@ export default function About() {
 </section>
 
 
-        {/* ✅ Instructors Section */}
-        <section className="px-6 sm:px-6 md:px-20 mx-auto py-20 px-6 text-center">
-          <div className="mb-12">
-            <motion.h3
-              className="text-[#077340] font-semibold mb-2 uppercase tracking-wide"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              Our Instructors
-            </motion.h3>
-
-            <motion.h2
-              className="text-3xl md:text-4xl font-[400] text-gray-900"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2, duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <span className="font-[700]">The experts</span> behind your
-              <br />
-              performance
-            </motion.h2>
-          </div>
-
-          {/* Instructor Cards */}
-          <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-8">
-            {[
-              {
-                name: "E. Luther Sanchez",
-                bio: "E. Luther Sanchez started Brazilian Jiu-Jitsu in 2016 and has competed in both NAGA and IBJJF circuits...",
-                image: "/luther.webp",
-              },
-              {
-                name: "Eric",
-                bio: "Eric is a Brazilian Jiu-Jitsu black belt under ZR Team. A lifelong athlete who has tested himself...",
-                image: "/eric.webp",
-              },
-            ].map((person, i) => (
-              <motion.div
-                key={i}
-                className="bg-gray-50 rounded-2xl overflow-hidden shadow-md border border-gray-200 transition-transform duration-300 hover:scale-[1.02]"
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: i * 0.2 }}
-                viewport={{ once: true }}
-              >
-                <Image
-                  src={person.image}
-                  alt={person.name}
-                  width={800}
-                  height={600}
-                  className="object-cover w-full h-[320px] md:h-[360px]"
-                />
-                <div className="p-6 text-left">
-                  <h4 className="font-bold text-2xl mb-3 text-gray-900">
-                    {person.name}
-                  </h4>
-                  <p className="text-gray-700 text-base leading-relaxed">
-                    {person.bio}
-                  </p>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </section>
+      <FaqSection/>
+        
       </main>
 
       <Footer />

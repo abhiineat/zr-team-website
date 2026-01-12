@@ -64,7 +64,7 @@ export default function ProgramHero({
             alt={title}
             width={1600}
             height={900}
-            className="w-full h-[32rem] object-cover transition-transform duration-700 ease-out"
+            className="w-full h-[32rem] object-cover transition-transform rounded-xl duration-700 ease-out"
             priority
           />
         </div>
