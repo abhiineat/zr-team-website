@@ -11,7 +11,7 @@ export default function Navbar() {
   const [isProgramsOpen, setIsProgramsOpen] = useState(false);
 
   return (
-    <nav className="fixed top-4 left-1/2 transform -translate-x-1/2 w-[90%] md:w-[90%] z-50 bg-black/40 backdrop-blur-sm text-white py-2 px-4 rounded-full shadow-lg border border-white/10">
+    <nav className="fixed top-4 z-[2000] left-1/2 transform -translate-x-1/2 w-[90%] md:w-[90%] z-50 bg-black/40 backdrop-blur-sm text-white py-2 px-4 rounded-full shadow-lg border border-white/10">
       <div className="flex justify-between items-center">
         {/* Logo */}
         <Link href="/" aria-label="Go to homepage">
@@ -77,7 +77,7 @@ export default function Navbar() {
           <Link href="/instructor" className="hover:text-green-400 pt-1 transition-colors">
             Instructors
           </Link>
-          <a href="#schools" className="hover:text-green-400 pt-1 transition-colors">
+          <a href="/our_schools" className="hover:text-green-400 pt-1 transition-colors">
             Our Schools
           </a>
           <Link href="/facilities" className="hover:text-green-400 pt-1 transition-colors">
@@ -87,7 +87,7 @@ export default function Navbar() {
 
         {/* Contact Button (Desktop) */}
         <a
-          href="#contact"
+          href="/contact"
           className="hidden md:inline-block bg-black text-white font-semibold px-6 py-2 rounded-full border border-gray-700 hover:bg-green-600 hover:border-green-600 transition-all"
         >
           Contact Us
@@ -164,13 +164,13 @@ export default function Navbar() {
           <Link href="/instructor" className="block hover:text-green-400">
             Instructors
           </Link>
-          <a href="#schools" className="block hover:text-green-400">
+          <a href="/our_schools" className="block hover:text-green-400">
             Our Schools
           </a>
           <Link href="/facilities" className="block hover:text-green-400">
             Facilities
           </Link>
-          <a href="#contact" className="block hover:text-green-400">
+          <a href="/contact" className="block hover:text-green-400">
             Contact Us
           </a>
         </div>
