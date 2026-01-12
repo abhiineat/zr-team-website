@@ -38,11 +38,11 @@ export default function Page() {
           {/* Right Section */}
           <div className="flex-1">
             <Image
-              src={coachImage}
+              src="/coaches.jpg"
               alt="Coaches"
               width={600}
               height={500}
-              className="rounded-2xl object-cover w-full h-auto shadow-md"
+              className="rounded-xl object-cover w-full h-[36rem] shadow-md"
               priority
             />
           </div>
