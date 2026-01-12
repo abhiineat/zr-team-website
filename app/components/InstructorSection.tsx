@@ -29,12 +29,12 @@ export default function InstructorsSection() {
       {
         name: "Lucas",
         bio: "Lucas is an athlete.",
-        image: "/daryl.jpg",
+        image: "/lucas.jpg",
       },
     ];
   
     return (
-      <section className="px-6 sm:px-6 md:px-20 mx-auto py-12 px-6 text-center">
+      <section className="px-6 sm:px-6 md:px-20 mx-auto px-6 text-center">
         {/* Heading */}
         <motion.div
           className="mb-12"

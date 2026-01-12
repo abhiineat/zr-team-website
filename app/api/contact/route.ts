@@ -8,8 +8,8 @@ export async function POST(req: Request) {
     const { firstName, lastName, email, message } = await req.json();
 
     await resend.emails.send({
-      from: "Website Contact <onboarding@resend.dev>", 
-      to: "abhii.neat@gmail.com",
+      from: "Website Contact <contact@google.com>", 
+      to: "abhii.neay@gmail.com",
       replyTo: email, // user can be replied to
       subject: "New Contact Form Submission",
       html: `

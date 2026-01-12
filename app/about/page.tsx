@@ -118,55 +118,73 @@ export default function About() {
         </section>
 
         {/* ✅ Mission / Vision / Values */}
-        <section className="px-6 sm:px-6 md:px-20 mx-auto px-4 sm:px-6 md:px-10 py-20">
-          <motion.div
-            className="relative rounded-3xl overflow-hidden shadow-lg"
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 1 }}
-            viewport={{ once: true }}
-          >
-            <div
-              className="h-[23rem] w-full bg-cover bg-center relative"
-              style={{ backgroundImage: "url('/mission.webp')" }}
-            >
-              <div className="absolute inset-0 bg-black/40"></div>
+        <section className="mx-auto px-4 sm:px-6 md:px-10 lg:px-20 py-16 sm:py-12">
+  <motion.div
+    className="relative rounded-3xl overflow-hidden shadow-lg"
+    initial={{ opacity: 0, scale: 0.95 }}
+    whileInView={{ opacity: 1, scale: 1 }}
+    transition={{ duration: 1 }}
+    viewport={{ once: true }}
+  >
+    <div
+      className="
+        w-full
+        min-h-[22rem]
+        sm:min-h-[26rem]
+        md:min-h-[30rem]
+        bg-cover bg-center
+        relative
+      "
+      style={{ backgroundImage: "url('/mission.webp')" }}
+    >
+      {/* overlay */}
+      <div className="absolute inset-0 bg-black/40" />
 
-              <div className="relative z-10 p-8 sm:p-12 md:p-16">
-                <div className="grid md:grid-cols-3 gap-6 sm:gap-8">
-                  {[
-                    {
-                      title: "Our Mission",
-                      text: "To impart the art of Brazilian Jiu-Jitsu to individuals of all backgrounds, emphasizing the value of each person and nurturing the inherent potential within every student.",
-                    },
-                    {
-                      title: "Our Vision",
-                      text: "To extend the reach of our Jiu-Jitsu philosophy across the globe.",
-                    },
-                    {
-                      title: "Our Values",
-                      text: "We uphold the principles of honesty, fairness, purity, and integrity. In all our endeavors, we strive to embody these virtues and maintain an unwavering commitment to excellence.",
-                    },
-                  ].map((card, i) => (
-                    <motion.div
-                      key={i}
-                      className="bg-white/15 border border-white/30 backdrop-blur-xs text-white p-8 rounded-xl"
-                      initial={{ opacity: 0, y: 40 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.8, delay: i * 0.2 }}
-                      viewport={{ once: true }}
-                    >
-                      <h4 className="font-bold text-xl mb-3">{card.title}</h4>
-                      <p className="text-gray-200 text-base leading-relaxed">
-                        {card.text}
-                      </p>
-                    </motion.div>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </motion.div>
-        </section>
+      <div className="relative z-10 px-6 py-10 sm:px-10 sm:py-14 md:px-16 md:py-28">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
+          {[
+            {
+              title: "Our Mission",
+              text: "To impart the art of Brazilian Jiu-Jitsu to individuals of all backgrounds, emphasizing the value of each person and nurturing the inherent potential within every student.",
+            },
+            {
+              title: "Our Vision",
+              text: "To extend the reach of our Jiu-Jitsu philosophy across the globe.",
+            },
+            {
+              title: "Our Values",
+              text: "We uphold the principles of honesty, fairness, purity, and integrity. In all our endeavors, we strive to embody these virtues and maintain an unwavering commitment to excellence.",
+            },
+          ].map((card, i) => (
+            <motion.div
+              key={i}
+              className="
+                bg-white/15
+                border border-white/30
+                backdrop-blur-sm
+                text-white
+                p-6 sm:p-8
+                rounded-xl
+              "
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: i * 0.2 }}
+              viewport={{ once: true }}
+            >
+              <h4 className="font-bold text-lg sm:text-xl mb-3">
+                {card.title}
+              </h4>
+              <p className="text-gray-200 text-sm sm:text-base leading-relaxed">
+                {card.text}
+              </p>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </motion.div>
+</section>
+
 
         {/* ✅ Instructors Section */}
         <section className="px-6 sm:px-6 md:px-20 mx-auto py-20 px-6 text-center">
