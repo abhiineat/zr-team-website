@@ -123,8 +123,8 @@ export default function HeroSection() {
                     
                     {/* LEFT: Text + Play Button */}
                     <div className="flex flex-col justify-between flex-1">
-                      <h3 className="text-white font-semibold text-lg">
-                        Checkout our Facilities
+                      <h3 className="text-white font-semibold text-xl">
+                        View our Instructors
                       </h3>
             
                       <div className="mt-4">
@@ -142,7 +142,7 @@ export default function HeroSection() {
                     </div>
             
                     {/* RIGHT: Image */}
-                    <div className="relative w-44 h-40 rounded-xl overflow-hidden shrink-0">
+                    <div className="relative w-48 h-48 rounded-xl overflow-hidden shrink-0">
                       <Image
                         src="/view.jpg"
                         alt="Facility"
