@@ -42,7 +42,7 @@ export default function Schedule() {
   const [selectedDay, setSelectedDay] = useState("Monday");
 
   return (
-    <section className="max-w-6xl mx-auto px-6 py-20 overflow-hidden">
+    <section className="px-6 md:px-20 px-6 py-20 overflow-hidden">
       {/* 🏷️ Title */}
       <motion.h2
         className="font-montserrat text-3xl md:text-5xl font-[500] mb-10"

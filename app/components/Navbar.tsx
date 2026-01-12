@@ -8,6 +8,7 @@ import menuIcon from "../../public/menu.png"; // <-- your custom hamburger icon
 export default function Navbar() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isProgramsOpen, setIsProgramsOpen] = useState(false);
 
   return (
     <nav className="fixed top-4 left-1/2 transform -translate-x-1/2 w-[90%] md:w-[90%] z-50 bg-black/40 backdrop-blur-sm text-white py-2 px-4 rounded-full shadow-lg border border-white/10">
@@ -122,9 +123,41 @@ export default function Navbar() {
           <Link href="/about" className="block hover:text-green-400">
             About Us
           </Link>
+          <div className="text-left">
+      <button
+        onClick={() => setIsProgramsOpen(!isProgramsOpen)}
+        className="w-full flex justify-center items-center hover:text-green-400"
+      >
+        <span>Programs</span>
+        <span
+          className={`ml-2 transform transition-transform duration-300 ${
+            isProgramsOpen ? "rotate-180" : ""
+          }`}
+        >
+          ▾
+        </span>
+      </button>
+
+      {isProgramsOpen && (
+        <div className="mt-2 ml-4 space-y-2 text-sm">
           <Link href="/programs/future-champions" className="block hover:text-green-400">
-            Programs
+            Future Champions
           </Link>
+          <Link href="/programs/fundamentals" className="block hover:text-green-400">
+            Fundamentals Program
+          </Link>
+          <Link href="/programs/womens" className="block hover:text-green-400">
+            Women’s Program
+          </Link>
+          <Link href="/programs/nogi" className="block hover:text-green-400">
+            No-GI Program
+          </Link>
+          <Link href="/programs/advanced" className="block hover:text-green-400">
+            Advanced Program
+          </Link>
+        </div>
+      )}
+    </div>
           <Link href="/schedule" className="block hover:text-green-400">
             Schedule
           </Link>

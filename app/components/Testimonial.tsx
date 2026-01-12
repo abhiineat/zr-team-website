@@ -24,7 +24,7 @@ export default function Testimonial() {
 
   return (
     <section className="w-full bg-[#FBF8F8] text-gray-900 overflow-hidden py-20">
-      <div className="max-w-6xl mx-auto px-6 md:px-0">
+      <div className="px-6 md:px-20 px-6 md:px-0">
 
         {/* Section Heading */}
         <motion.div
@@ -35,8 +35,8 @@ export default function Testimonial() {
           className="text-center md:text-left"
         >
           <h3 className="text-green-600 font-semibold mb-2">Testimonials</h3>
-          <h2 className="font-montserrat text-3xl md:text-5xl font-[400] mb-12 leading-tight">
-            <span className="text-black font-bold">Our community</span> is at
+          <h2 className="font-montserrat text-3xl md:text-5xl font-[600] mb-12 leading-tight">
+            <span className="text-black font-[700]">Our community</span> is at
             the heart of everything we do.
           </h2>
         </motion.div>

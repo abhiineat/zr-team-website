@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Lato, Montserrat } from "next/font/google";
 import "./globals.css";
 
-// Import both fonts with all weights
 const lato = Lato({
   variable: "--font-lato",
   subsets: ["latin"],

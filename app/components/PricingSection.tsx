@@ -63,8 +63,8 @@ export default function PricingSection({
   ],
 }: PricingSectionProps) {
   return (
-    <section className="w-full bg-[#FBF8F8] text-gray-900 overflow-hidden py-16 md:py-20">
-      <div className="max-w-6xl mx-auto px-4 md:px-6">
+    <section className="w-full bg-[#FBF8F8] text-gray-900 overflow-hidden py-16 md:py-16">
+      <div className="px-6 md:px-20 px-4 md:px-6">
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -73,11 +73,12 @@ export default function PricingSection({
           viewport={{ once: true }}
         >
           <h3 className="text-[#077340] font-semibold mb-2">{heading}</h3>
-          <h2 className="text-3xl md:text-5xl font-bold mb-10 leading-tight">
+          <h2 className="text-3xl md:text-5xl font-[600] mb-10 leading-tight">
             {subheading.includes("Brazilian Jiu-Jitsu") ? (
               <>
                 Transparent pricing for authentic{" "}
-                <span className="text-black font-extrabold">
+                <br />
+                <span className="text-black ">
                   Brazilian Jiu-Jitsu training
                 </span>
               </>
