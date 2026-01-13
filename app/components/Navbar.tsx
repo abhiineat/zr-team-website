@@ -4,12 +4,14 @@ import Link from "next/link";
 import { useState } from "react";
 import logo from "../../public/logo.png";
 import menuIcon from "../../public/menu.png"; // <-- your custom hamburger icon
+import { usePathname } from "next/navigation";
 
 export default function Navbar() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isProgramsOpen, setIsProgramsOpen] = useState(false);
-
+  const pathname = usePathname();
+  
   return (
     <nav className="fixed top-4 z-[2000] left-1/2 transform -translate-x-1/2 w-[90%] md:w-[90%] z-50 bg-black/40 backdrop-blur-sm text-white py-2 px-4 rounded-full shadow-lg border border-white/10">
       <div className="flex justify-between items-center">
@@ -27,10 +29,16 @@ export default function Navbar() {
 
         {/* Desktop Nav Links */}
         <div className="hidden md:flex space-x-8 text-base font-semibold relative">
-          <Link href="/" className="hover:text-green-400 pt-1 transition-colors">
+          <Link href="/" className={`pt-1 transition-colors ${
+    pathname === "/" ? "text-green-400" : "hover:text-green-400"
+  }`}>
             Home
           </Link>
-          <Link href="/about" className="hover:text-green-400 pt-1 transition-colors">
+          <Link href="/about" className={`pt-1 transition-colors ${
+    pathname.startsWith("/about")
+      ? "text-green-400"
+      : "hover:text-green-400"
+  }`}>
             About Us
           </Link>
 
@@ -40,7 +48,11 @@ export default function Navbar() {
             onMouseEnter={() => setIsDropdownOpen(true)}
             onMouseLeave={() => setIsDropdownOpen(false)}
           >
-            <button className="flex items-center hover:text-green-400 transition-colors px-2 py-1">
+            <button className={`flex items-center px-2 py-1 transition-colors ${
+    pathname.startsWith("/programs")
+      ? "text-green-400"
+      : "hover:text-green-400"
+  }`}>
               Programs <span className="ml-1">▾</span>
             </button>
 
@@ -71,16 +83,32 @@ export default function Navbar() {
             </div>
           </div>
 
-          <Link href="/schedule" className="hover:text-green-400 pt-1 transition-colors">
+          <Link href="/schedule" className={`pt-1 transition-colors ${
+    pathname === "/schedule"
+      ? "text-green-400"
+      : "hover:text-green-400"
+  }`}>
             Schedule
           </Link>
-          <Link href="/instructor" className="hover:text-green-400 pt-1 transition-colors">
+          <Link href="/instructor" className={`pt-1 transition-colors ${
+    pathname === "/instructor"
+      ? "text-green-400"
+      : "hover:text-green-400"
+  }`}>
             Instructors
           </Link>
-          <a href="/our_schools" className="hover:text-green-400 pt-1 transition-colors">
+          <a href="/our_schools" className={`pt-1 transition-colors ${
+    pathname === "/our_schools"
+      ? "text-green-400"
+      : "hover:text-green-400"
+  }`}>
             Our Schools
           </a>
-          <Link href="/facilities" className="hover:text-green-400 pt-1 transition-colors">
+          <Link href="/facilities" className={`pt-1 transition-colors ${
+    pathname === "/facilities"
+      ? "text-green-400"
+      : "hover:text-green-400"
+  }`}>
             Facilities
           </Link>
         </div>
@@ -88,7 +116,11 @@ export default function Navbar() {
         {/* Contact Button (Desktop) */}
         <a
           href="/contact"
-          className="hidden md:inline-block bg-black text-white font-semibold px-6 py-2 rounded-full border border-gray-700 hover:bg-green-600 hover:border-green-600 transition-all"
+          className={`hidden md:inline-block bg-black text-white font-semibold px-6 py-2 rounded-full transition-all ${
+            pathname === "/contact"
+              ? " bg-green-600 text-green-400"
+              : " hover:bg-green-600 hover:border-green-600"
+          }`}
         >
           Contact Us
         </a>
@@ -117,16 +149,24 @@ export default function Navbar() {
   
   >
 
-          <Link href="/" className="block hover:text-green-400">
+          <Link href="/" className={`block transition-colors ${
+    pathname === "/" ? "text-green-400" : "hover:text-green-400"
+  }`}>
             Home
           </Link>
-          <Link href="/about" className="block hover:text-green-400">
+          <Link href="/about" className={`block transition-colors ${
+    pathname === "/about" ? "text-green-400" : "hover:text-green-400"
+  }`}>
             About Us
           </Link>
           <div className="text-left">
       <button
         onClick={() => setIsProgramsOpen(!isProgramsOpen)}
-        className="w-full flex justify-center items-center hover:text-green-400"
+        className={`w-full flex justify-center items-center transition-colors ${
+          pathname.startsWith("/programs")
+            ? "text-green-400"
+            : "hover:text-green-400"
+        }`}
       >
         <span>Programs</span>
         <span
@@ -158,19 +198,29 @@ export default function Navbar() {
         </div>
       )}
     </div>
-          <Link href="/schedule" className="block hover:text-green-400">
+          <Link href="/schedule" className={`block transition-colors ${
+    pathname === "/schedule" ? "text-green-400" : "hover:text-green-400"
+  }`}>
             Schedule
           </Link>
-          <Link href="/instructor" className="block hover:text-green-400">
+          <Link href="/instructor" className={`block transition-colors ${
+    pathname === "/instructor" ? "text-green-400" : "hover:text-green-400"
+  }`}>
             Instructors
           </Link>
-          <a href="/our_schools" className="block hover:text-green-400">
+          <a href="/our_schools" className={`block transition-colors ${
+    pathname === "/our_schools" ? "text-green-400" : "hover:text-green-400"
+  }`}>
             Our Schools
           </a>
-          <Link href="/facilities" className="block hover:text-green-400">
+          <Link href="/facilities" className={`block transition-colors ${
+    pathname === "/facilities" ? "text-green-400" : "hover:text-green-400"
+  }`}>
             Facilities
           </Link>
-          <a href="/contact" className="block hover:text-green-400">
+          <a href="/contact" className={`block transition-colors ${
+    pathname === "/contact" ? "text-green-400" : "hover:text-green-400"
+  }`}>
             Contact Us
           </a>
         </div>
