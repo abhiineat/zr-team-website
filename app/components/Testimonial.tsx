@@ -34,11 +34,11 @@ export default function Testimonial() {
           viewport={{ once: true }}
           className="text-center md:text-left"
         >
-          <h3 className="text-green-600 font-semibold mb-2 text-left md:text-center">
+          <h3 className="text-green-600 font-semibold mb-2 text-left ">
   Testimonials
 </h3>
 
-<h2 className="font-montserrat text-3xl md:text-5xl font-[600] mb-12 leading-tight text-left md:text-center">
+<h2 className="font-montserrat text-3xl md:text-5xl font-[600] mb-12 leading-tight text-left ">
   <span className="text-black font-[700]">Our community</span> is at
   the heart of everything we do.
 </h2>
