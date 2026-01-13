@@ -64,8 +64,14 @@ export default function FaqSection({
           viewport={{ once: true }}
           className="text-center md:text-left mb-10"
         >
-          <h3 className="text-green-700 font-semibold mb-2">{subheading}</h3>
-          <h2 className="text-3xl md:text-5xl font-bold">{heading}</h2>
+         <h3 className="text-green-700 font-semibold mb-2 text-left md:text-center">
+  {subheading}
+</h3>
+
+<h2 className="text-3xl md:text-5xl font-bold text-left md:text-center">
+  {heading}
+</h2>
+
         </motion.div>
 
         {/* FAQ List */}
