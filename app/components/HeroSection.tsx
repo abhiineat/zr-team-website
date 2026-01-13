@@ -146,48 +146,49 @@ export default function HeroSection() {
 
             {/* Card 3 */}
             <motion.div
-              className="bg-[#077340] p-6 rounded-xl shadow-lg text-white w-full lg:w-[31%]"
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.4, duration: 0.8 }}
-              viewport={{ once: true }}
+  className="bg-[#077340] p-4 sm:p-6 rounded-xl shadow-lg text-white w-full lg:w-[31%]"
+  initial={{ opacity: 0, y: 40 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  transition={{ delay: 0.4, duration: 0.8 }}
+  viewport={{ once: true }}
+>
+  <Link href="/facilities" className="block h-full">
+    <div className="flex flex-col sm:flex-row h-full gap-4 cursor-pointer group">
+
+      {/* TEXT */}
+      <div className="flex flex-col justify-between flex-1">
+        <h3 className="font-semibold text-lg sm:text-2xl leading-snug">
+          View our Instructors
+        </h3>
+
+        <div className="mt-4 flex sm:block justify-center">
+          <div className="w-10 h-10 sm:w-12 sm:h-12 bg-white rounded-full flex items-center justify-center shadow-md">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="black"
+              viewBox="0 0 24 24"
+              className="w-5 h-5 sm:w-6 sm:h-6"
             >
-              <Link href="/facilities" className="block h-full">
-                  <div className="flex h-full gap-4 cursor-pointer group">
-                    
-                    {/* LEFT: Text + Play Button */}
-                    <div className="flex flex-col justify-between flex-1">
-                      <h3 className="text-white font-semibold text-2xl">
-                        View our Instructors
-                      </h3>
-            
-                      <div className="mt-4">
-                        <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-md">
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            fill="black"
-                            viewBox="0 0 24 24"
-                            className="w-6 h-6"
-                          >
-                            <path d="M5.25 5.25v13.5l13.5-6.75L5.25 5.25z" />
-                          </svg>
-                        </div>
-                      </div>
-                    </div>
-            
-                    {/* RIGHT: Image */}
-                    <div className="relative w-48 h-48 rounded-xl overflow-hidden shrink-0">
-                      <Image
-                        src="/view.jpg"
-                        alt="Facility"
-                        fill
-                        className="object-cover transition-transform duration-500 group-hover:scale-105"
-                      />
-                    </div>
-            
-                  </div>
-                </Link>
-            </motion.div>
+              <path d="M5.25 5.25v13.5l13.5-6.75L5.25 5.25z" />
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      {/* IMAGE */}
+      <div className="relative w-full sm:w-40 h-36 sm:h-40 rounded-xl overflow-hidden shrink-0">
+        <Image
+          src="/view.jpg"
+          alt="Facility"
+          fill
+          className="object-cover transition-transform duration-500 group-hover:scale-105"
+        />
+      </div>
+
+    </div>
+  </Link>
+</motion.div>
+
 
           </div>
         </div>

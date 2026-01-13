@@ -1,63 +1,65 @@
 import Image from "next/image";
-import { FaInstagram,  FaTwitter, FaYoutube } from "react-icons/fa";
-import { SlSocialFacebook,SlSocialYoutube,SlSocialTwitter} from "react-icons/sl";
+import { FaInstagram } from "react-icons/fa";
+import { SlSocialFacebook, SlSocialYoutube, SlSocialTwitter } from "react-icons/sl";
+
 export default function Footer() {
   return (
-    <footer className="bg-[#FBF8F8] text-gray-900 pt-12 pb-6 ">
-      <div className="max-w-7xl mx-auto px-6">
-        {/* Centered Logo + Question Line */}
-        <div className="flex flex-col md:flex-row items-center justify-between gap-4 md:gap-6 mb-10">
+    <footer className="bg-[#FBF8F8] text-gray-900 pt-10 pb-6">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
+        {/* Logo + Question */}
+        <div className="flex flex-col sm:flex-row items-center justify-between gap-4 mb-8">
           <Image
-            src="/logo.png" // replace with your actual logo path
+            src="/logo.png"
             alt="ZR Team Logo"
-            width={70}
-            height={70}
+            width={60}
+            height={60}
             className="rounded-full border border-green-600 object-cover"
           />
-          <h3 className="text-3xl md:text-4xl font-[400] text-center md:text-left">
+
+          <h3 className="text-xl sm:text-3xl font-[400] text-center sm:text-left leading-tight">
             Questions?{" "}
             <a
-              href="mailto:info@zrteamhm.com"
-              className="font-bold underline underline-offset-6 hover:text-green-600"
+              href="mailto:infohopemills@gmail.com"
+              className="font-bold underline underline-offset-4 hover:text-green-600 break-all"
             >
               infohopemills@gmail.com
             </a>
           </h3>
         </div>
 
-        {/* Main Footer Content */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
-          {/* Left Section */}
+        {/* Main Content */}
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
+          {/* Left */}
           <div className="flex flex-col gap-4">
-            <p className="text-sm leading-relaxed text-gray-700 max-w-sm">
-              "Stay connected with ZR Team: Follow us on social media for the
-              latest updates, events, and training tips. Join our community and
-              experience the thrill of Brazilian Jiu-Jitsu today!"
+            <p className="text-xs sm:text-sm leading-relaxed text-gray-700 max-w-full">
+              Stay connected with ZR Team. Follow us on social media for updates,
+              events, and training tips. Join our Brazilian Jiu-Jitsu community.
             </p>
-            <div className="flex gap-4 text-gray-800 text-lg">
-              <a href="https://www.instagram.com/zrteam/?hl=en" className="hover:text-green-600 transition">
+
+            <div className="flex gap-4 text-gray-800 text-lg flex-wrap">
+              <a href="https://www.instagram.com/zrteam/?hl=en" className="hover:text-green-600">
                 <FaInstagram />
               </a>
-              <a href="https://www.facebook.com/zrteambjj/" className="hover:text-green-600 transition">
+              <a href="https://www.facebook.com/zrteambjj/" className="hover:text-green-600">
                 <SlSocialFacebook />
               </a>
-              <a href="https://www.youtube.com/channel/UCfEUsNfttSMYed5OvX0JxBw" className="hover:text-green-600 transition">
+              <a href="https://www.youtube.com/channel/UCfEUsNfttSMYed5OvX0JxBw" className="hover:text-green-600">
                 <SlSocialTwitter />
               </a>
-              <a href="https://x.com/zrteamhopemills" className="hover:text-green-600 transition">
+              <a href="https://x.com/zrteamhopemills" className="hover:text-green-600">
                 <SlSocialYoutube />
               </a>
             </div>
           </div>
 
-          {/* Spacer for center alignment on large screens */}
-          <div></div>
+          {/* Spacer (hidden on mobile automatically) */}
+          <div className="hidden md:block" />
 
-          {/* Right Section */}
-          <div className="grid grid-cols-2 gap-8">
+          {/* Right */}
+          <div className="grid grid-cols-2 gap-6">
             <div>
-              <h4 className="font-semibold mb-2">Home</h4>
-              <ul className="space-y-1 text-sm text-gray-700">
+              <h4 className="font-semibold mb-2 text-sm">Home</h4>
+              <ul className="space-y-1 text-xs sm:text-sm text-gray-700">
                 <li><a href="#" className="hover:text-green-600">About Us</a></li>
                 <li><a href="#" className="hover:text-green-600">Schedule</a></li>
                 <li><a href="#" className="hover:text-green-600">Instructors</a></li>
@@ -65,9 +67,10 @@ export default function Footer() {
                 <li><a href="#" className="hover:text-green-600">Facilities</a></li>
               </ul>
             </div>
+
             <div>
-              <h4 className="font-semibold mb-2">Programs</h4>
-              <ul className="space-y-1 text-sm text-gray-700">
+              <h4 className="font-semibold mb-2 text-sm">Programs</h4>
+              <ul className="space-y-1 text-xs sm:text-sm text-gray-700">
                 <li><a href="#" className="hover:text-green-600">Future Champions</a></li>
                 <li><a href="#" className="hover:text-green-600">Fundamental Program</a></li>
                 <li><a href="#" className="hover:text-green-600">Women’s Program</a></li>
@@ -78,8 +81,8 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Bottom Divider */}
-        <div className="mt-12 border-t border-[#CFE7CB] pt-4 text-center text-sm text-gray-600">
+        {/* Bottom */}
+        <div className="mt-10 border-t border-[#CFE7CB] pt-4 text-center text-xs sm:text-sm text-gray-600">
           © ZR Team. All rights reserved. Designed by Konnect Vision Media
         </div>
       </div>

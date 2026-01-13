@@ -40,7 +40,7 @@ export default function ProgramsSection() {
   return (
     <section
       id="programs"
-      className="bg-[#FBF8F8] text-black py-20 px-10 md:px-24 overflow-hidden"
+      className="bg-[#FBF8F8] text-black py-20 px-6 md:px-24 overflow-hidden"
     >
       {/* ✨ Header with subtle fade-in */}
       <motion.div
@@ -120,46 +120,66 @@ export default function ProgramsSection() {
             />
 
             {/* Overlay Content */}
-            <div className="absolute inset-0 bg-black/50 flex flex-col justify-end p-5 transition-all duration-300 group-hover:bg-black/40">
-              <div>
-                <h3 className="text-white text-4xl font-bold mb-4 transition-transform duration-500 group-hover:translate-y-[-2px]">
-                  {program.title}
-                </h3>
+            <div className="absolute inset-0 bg-black/50 flex flex-col justify-end 
+                p-3 sm:p-5 
+                transition-all duration-300 group-hover:bg-black/40">
+  <div>
+    <h3 className="text-white text-2xl sm:text-4xl font-bold 
+                   mb-2 sm:mb-4 
+                   transition-transform duration-500 group-hover:translate-y-[-2px]">
+      {program.title}
+    </h3>
 
-                <div className="flex items-center justify-between">
-                  <div className="flex gap-2">
-                    {program.tags.map((tag) => (
-                      <span
-                        key={tag}
-                        className="bg-white/20 text-white text-sm px-3 py-1 rounded-full"
-                      >
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
+    <div className="flex items-center justify-between gap-2 sm:gap-0">
+      
+      {/* TAGS */}
+      <div className="flex gap-1 sm:gap-2 flex-wrap">
+        {program.tags.map((tag) => (
+          <span
+            key={tag}
+            className="bg-white/20 text-white 
+                       text-xs sm:text-sm 
+                       px-2 sm:px-3 
+                       py-0.5 sm:py-1 
+                       rounded-full"
+          >
+            {tag}
+          </span>
+        ))}
+      </div>
 
-                  <Link
-                    href={`/programs/${program.slug}`}
-                    className="bg-white text-black w-9 h-9 flex items-center justify-center rounded-full hover:bg-green-600 hover:text-white transition ml-3 flex-shrink-0"
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      strokeWidth={2}
-                      stroke="currentColor"
-                      className="w-5 h-5"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        d="M5 12h14m-7-7l7 7-7 7"
-                      />
-                    </svg>
-                  </Link>
-                </div>
-              </div>
-            </div>
+      {/* ARROW */}
+      <Link
+        href={`/programs/${program.slug}`}
+        className="bg-white text-black 
+                   w-8 h-8 sm:w-9 sm:h-9 
+                   flex items-center justify-center 
+                   rounded-full 
+                   hover:bg-green-600 hover:text-white 
+                   transition 
+                   ml-1 sm:ml-3 
+                   flex-shrink-0"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          strokeWidth={2}
+          stroke="currentColor"
+          className="w-4 h-4 sm:w-5 sm:h-5"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            d="M5 12h14m-7-7l7 7-7 7"
+          />
+        </svg>
+      </Link>
+
+    </div>
+  </div>
+</div>
+
           </motion.div>
         ))}
       </motion.div>
