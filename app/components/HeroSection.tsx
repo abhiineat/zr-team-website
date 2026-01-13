@@ -6,7 +6,12 @@ import TestimonialCarousel from "./TestimonialCarousel";
 import Link from "next/link";
 
 export default function HeroSection() {
-  
+  const avatars = [
+    "/daryl.jpg",
+    "/lucas.jpg",
+    "/luther.webp",
+    "/eric.webp",
+  ];
   return (
     <section className="relative w-full min-h-[90vh] text-white overflow-hidden">
       {/* 🖼️ Background Image with gradient overlay */}
@@ -59,11 +64,18 @@ export default function HeroSection() {
           transition={{ delay: 0.6, duration: 0.8 }}
         >
           <div className="flex gap-4">
-  <Link href="/programs/advanced">
-    <button className="bg-white text-black px-6 py-3 rounded-full font-semibold shadow-lg hover:bg-gray-200 transition">
-      Explore Programs
-    </button>
-  </Link>
+          <button
+  onClick={() => {
+    document
+      .getElementById("programs")
+      ?.scrollIntoView({ behavior: "smooth" });
+  }}
+  className="bg-white text-black px-6 py-3 rounded-full font-semibold shadow-lg hover:bg-gray-200 transition"
+>
+  Explore Programs
+</button>
+
+
 
   <Link href="/contact">
     <button className="bg-[#077340] text-white px-6 py-3 rounded-full font-semibold shadow-lg hover:bg-green-700 transition">
@@ -91,20 +103,20 @@ export default function HeroSection() {
                   </p>
                   <div className="mt-5 flex items-center gap-3">
                     <div className="flex -space-x-2">
-                      {[1, 2, 3, 4].map((_, i) => (
-                        <div
-                          key={i}
-                          className="w-10 h-10 rounded-full overflow-hidden bg-white border-2 border-green-600"
-                        >
-                          <Image
-                            src="/avatar.png"
-                            alt="user"
-                            width={40}
-                            height={40}
-                            className="w-full h-full object-cover rounded-full"
-                          />
-                        </div>
-                      ))}
+                    {avatars.map((src, i) => (
+  <div
+    key={i}
+    className="w-10 h-10 rounded-full overflow-hidden bg-white border-2 border-green-600"
+  >
+    <Image
+      src={src}
+      alt={`user-${i + 1}`}
+      width={40}
+      height={40}
+      className="w-full h-full object-cover rounded-full"
+    />
+  </div>
+))}
                     </div>
                     <div className="ml-2">
                       <p className="font-bold text-gray-900 text-base">20K+</p>

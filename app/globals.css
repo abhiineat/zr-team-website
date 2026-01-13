@@ -18,6 +18,9 @@
     --foreground: #ededed;
   }
 }
+html {
+  scroll-behavior: smooth;
+}
 
 /* 🌿 Apply global defaults */
 body {
