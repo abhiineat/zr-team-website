@@ -35,16 +35,16 @@ export default function Footer() {
               experience the thrill of Brazilian Jiu-Jitsu today!"
             </p>
             <div className="flex gap-4 text-gray-800 text-lg">
-              <a href="#" className="hover:text-green-600 transition">
+              <a href="https://www.instagram.com/zrteam/?hl=en" className="hover:text-green-600 transition">
                 <FaInstagram />
               </a>
-              <a href="#" className="hover:text-green-600 transition">
+              <a href="https://www.facebook.com/zrteambjj/" className="hover:text-green-600 transition">
                 <SlSocialFacebook />
               </a>
-              <a href="#" className="hover:text-green-600 transition">
+              <a href="https://www.youtube.com/channel/UCfEUsNfttSMYed5OvX0JxBw" className="hover:text-green-600 transition">
                 <SlSocialTwitter />
               </a>
-              <a href="#" className="hover:text-green-600 transition">
+              <a href="https://x.com/zrteamhopemills" className="hover:text-green-600 transition">
                 <SlSocialYoutube />
               </a>
             </div>

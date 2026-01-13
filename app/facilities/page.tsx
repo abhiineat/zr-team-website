@@ -58,7 +58,7 @@ export default function Page() {
         {/* 🧩 Facilities Details Section */}
         <motion.section
   id="facilities"
-  className="px-6 md:px-20 py-20 bg-[#FBF8F8]"
+  className="px-6 md:px-20  bg-[#FBF8F8]"
   initial={{ opacity: 0 }}
   whileInView={{ opacity: 1 }}
   transition={{ duration: 0.5, ease: "easeOut" }}

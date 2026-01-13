@@ -59,11 +59,31 @@ export default function ProgramsSection() {
         </div>
 
         <Link
-          href="/schedule"
-          className="mt-6 md:mt-0 inline-block bg-green-700 text-white px-6 py-3 rounded-full font-semibold hover:bg-green-800 transition"
-        >
-          View Class Schedule
-        </Link>
+  href="/schedule"
+  className="
+    mt-4 md:mt-0
+
+    inline-flex w-fit max-w-fit
+    items-center justify-center
+
+    bg-green-700 text-white font-semibold
+
+    h-12 sm:h-12
+    px-6 sm:px-8
+
+    text-sm sm:text-base
+    leading-none
+    rounded-full
+
+    whitespace-nowrap
+    hover:bg-green-800 transition
+  "
+>
+  View Class Schedule
+</Link>
+
+
+
       </motion.div>
 
       {/* 🧩 Program Grid with subtle staggered animation */}
