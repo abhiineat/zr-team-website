@@ -14,25 +14,25 @@ const programs = [
     title: "Fundamental Program",
     slug: "fundamental",
     tags: ["Run Faster", "Boost Endurance"],
-    image: "/program2.jpg",
+    image: "/program2.jpeg",
   },
   {
     title: "Women’s Program",
     slug: "womens",
     tags: ["Run Faster", "Boost Endurance"],
-    image: "/program3.jpg",
+    image: "/program3.jpeg",
   },
   {
     title: "No GI Program",
     slug: "nogi",
     tags: ["Run Faster", "Boost Endurance"],
-    image: "/program4.jpg",
+    image: "/program-4.jpeg",
   },
   {
     title: "Advanced Program",
     slug: "advanced",
     tags: ["Run Faster", "Boost Endurance"],
-    image: "/program5.jpg",
+    image: "/program5.jpeg",
   },
 ];
 
